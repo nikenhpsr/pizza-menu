@@ -17,7 +17,9 @@ export default function Footer() {
   } else {
     return (
       <footer>
-        <p>Sorry, We're Closed</p>
+        <p>
+          We are happy to welcome you between {openHour} and {closeHour}
+        </p>
         <p className="copyright">
           {" "}
           &copy; {new Date().getFullYear()} Niken Hapsari
