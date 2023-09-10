@@ -9,7 +9,7 @@ export default function Pizza() {
       return <p>Currently Available</p>;
     };
     return (
-      <div key={pizza.name}>
+      <div key={pizza.name} className="pizza-item">
         <h2>{pizza.name}</h2>
         <img src={pizza.photoName} alt={pizza.name} />
         <p>{pizza.ingredients}</p>
@@ -21,7 +21,7 @@ export default function Pizza() {
 
   return (
     <>
-      <div>{pizzaItems}</div>
+      <div className="pizza-grid">{pizzaItems}</div>
     </>
   );
 }

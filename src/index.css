@@ -34,25 +34,58 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  display: flex;
+  justify-content: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+h3 {
+  font-size: 2em;
+  font-family: Avenir;
+  line-height: 1.1;
+  display: flex;
+  justify-content: center;
+  position: relative; /* Add this to make ::before and ::after work */
 }
-button:hover {
-  border-color: #646cff;
+
+h3::before,
+h3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the lines as needed */
+  background-color: black; /* Adjust the color as needed */
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+h3::before {
+  top: -4px; /* Adjust the positioning of the overline */
+}
+
+h3::after {
+  bottom: -4px; /* Adjust the positioning of the underline */
+}
+
+/* Pizza.css */
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Adjust the gap between items */
+}
+
+.pizza-item {
+  border: 1px solid #ccc; /* Add borders to each pizza item */
+  padding: 20px; /* Add padding to space items */
+  text-align: center; /* Center the content */
+}
+
+.pizza-item img {
+  max-width: 100%; /* Ensure the image doesn't overflow its container */
+}
+
+.copyright {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {

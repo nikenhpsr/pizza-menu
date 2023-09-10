@@ -5,8 +5,24 @@ export default function Footer() {
   const isOpen = hour >= openHour && hour < closeHour;
 
   if (isOpen === true) {
-    return <footer>We're Open!</footer>;
+    return (
+      <footer>
+        <p>We're Open!</p>
+        <p className="copyright">
+          {" "}
+          &copy; {new Date().getFullYear()} Niken Hapsari
+        </p>
+      </footer>
+    );
   } else {
-    return <footer>Sorry, We're Closed</footer>;
+    return (
+      <footer>
+        <p>Sorry, We're Closed</p>
+        <p className="copyright">
+          {" "}
+          &copy; {new Date().getFullYear()} Niken Hapsari
+        </p>
+      </footer>
+    );
   }
 }
